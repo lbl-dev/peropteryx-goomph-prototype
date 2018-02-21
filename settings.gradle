@@ -1,0 +1,9 @@
+// simple demo app
+include 'peropteryx.rcp'
+
+// the targetplatform we're compiling against
+include 'target.p2'
+include 'target.maven'
+
+// the directory where we build the final shipped application
+include 'deploy'
