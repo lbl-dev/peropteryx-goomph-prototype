@@ -3,7 +3,7 @@ buildscript {
 		// make it easy to test a snapshot version of goomph
 		maven {	url 'https://oss.sonatype.org/content/repositories/snapshots/' }
 		// grab dependencies from the gradle plugin portal
-		maven { url 'https://plugins.gradle.org/m2/' }
+		maven { url 'https://plugins.gradle.org/m2/' }	
 	}
 	// make sure we don't cache stale snapshot versions
 	configurations.all {
@@ -36,6 +36,9 @@ subprojects {
 		maven {
 			url rootProject.file('target.p2/build/p2asmaven/maven')
 		}
+		
+		// the iobserve-repository (https://github.com/research-iobserve/iobserve-repository - branch: lbl-planning-and-execution-of-system-adaptations-in-cloud-based-systems)
+		maven {url project.properties['api.baseline']}
 	}
 }
 
